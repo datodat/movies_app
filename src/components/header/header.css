@@ -7,7 +7,7 @@
   width: 100%;
   max-width: 1900px;
   height: 56px;
-  background-color: #8246bb;
+  background-color: var(--purple);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,24 +18,25 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #162c69;
+  color: var(--white);
   padding-left: 20px;
 }
 
 .header nav {
   padding-right: 20px;
+  z-index: 10;
 }
 .header nav a {
   text-decoration: none;
   display: inline-block;
-  color: #FFF;
+  color: var(--white);
   font-weight: 500;
   text-transform: uppercase;
   padding: 16px 18px;
   transition: 0.3s;
 }
 .header nav a:hover {
-  background-color: #9157cc;
+  background-color: var(--light-purple);
 }
 
 .sandwitch-div {
@@ -55,7 +56,7 @@
 .sandwitch-div div {
   width: 100%;
   height: 3px;
-  background-color: #FFF;
+  background-color: var(--white);
   transition: ease-out 0.3s;
 }
 .sandwitch-clicked div:nth-child(2) {
@@ -79,7 +80,7 @@
     right: -100%;
     width: 100%;
     height: 100vh;
-    background-color: #9157cc;
+    background-color: var(--purple);
     transition: ease-out 0.3s;
   }
   .sandwitch-div {
