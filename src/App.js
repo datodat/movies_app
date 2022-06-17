@@ -6,8 +6,8 @@ import './App.css';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Movies from './components/movies/Movies';
-import TvSeries from './components/tv-series/TvSeries';
-import Favorites from './components/favorites/Favorites';
+// import TvSeries from './components/tv-series/TvSeries';
+// import Favorites from './components/favorites/Favorites';
 import axios from 'axios';
 // APIs
 const apiKey = 'k_5ncr48x9'
@@ -28,8 +28,8 @@ const App = () => {
         <Header />
 
         <Routes>
-          <Route path='/favorites' element={<Favorites />} />
-          <Route path='tv-series' element={<TvSeries />} />
+          {/* <Route path='/favorites' element={<Favorites />} /> */}
+          {/* <Route path='tv-series' element={<TvSeries />} /> */}
           <Route path='/' element={
             <Movies 
               searchMovie={searchMovie} 
