@@ -6,6 +6,32 @@
   background-color: var(--light-gray);
   border-radius: 8px;
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
+  position: relative;
+  transition: 0.3s;
+}
+
+#favorites-button {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 60%;
+  padding: 5px;
+  background-color: var(--light-gray);
+  border: 1px solid var(--light-gray);
+  border-radius: 4px;
+  color: var(--black);
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 4;
+}
+.card:hover {
+  opacity: 0.8;
+}
+.card:hover #favorites-button {
+  display: block;
 }
 
 .card > img {
@@ -13,6 +39,7 @@
   height: 80%;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  z-index: -1;
 }
 .card > h2 {
   width: 100%;

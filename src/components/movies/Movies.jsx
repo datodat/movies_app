@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './movies.css';
 import MovieCard from '../movieCard/MovieCard';
 
-const Movies = ({ searchMovie, movies }) => {
+const Movies = ({ searchMovie, movies, addToFavorites, removeFavorites }) => {
   const [searchWord, setSearchWord] = useState('');
 
   const handleSearch = e => {
@@ -35,7 +35,12 @@ const Movies = ({ searchMovie, movies }) => {
       <div className='movies-flex-div'>
         {movies.length > 0 && movies.map(i => {
           return (
-            <MovieCard key={i.id} movie={i} />
+            <MovieCard 
+              key={i.id} 
+              movie={i} 
+              addToFavorites={addToFavorites}
+              displayFavorites={false}
+            />
           );
         })}
       </div>
